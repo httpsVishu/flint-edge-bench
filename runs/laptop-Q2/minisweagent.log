@@ -1,0 +1,111 @@
+2026-10-25 12:36:56,622 - minisweagent - INFO - Loading dataset princeton-nlp/SWE-Bench_Verified, split test...
+2026-10-25 12:37:25,776 - minisweagent - INFO - Instance slice: 500 -> 1 instances
+2026-10-25 12:37:25,779 - minisweagent - INFO - Running on 1 instances...
+2026-10-25 12:37:25,779 - minisweagent - INFO - Building agent config from specs: ['.venv/lib/python3.12/site-packages/minisweagent/config/benchmarks/swebench.yaml', 'model.model_name=openai/flint', 'model.model_kwargs.api_base=http://127.0.0.1:9000/v1', 'model.model_kwargs.api_key=none', 'model.model_kwargs.max_tokens=4096', 'model.cost_tracking=ignore_errors', 'agent.step_limit=40']
+2026-10-25 12:37:32,170 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-05ba3d3f -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.django_1776_django-14672:latest sleep 2h
+2026-10-25 12:39:39,725 - minisweagent - ERROR - Error processing instance django__django-14672: Command '['docker', 'run', '-d', '--name', 'minisweagent-05ba3d3f', '-w', '/testbed', '--rm', 'docker.io/swebench/sweb.eval.x86_64.django_1776_django-14672:latest', 'sleep', '2h']' timed out after 120 seconds
+Traceback (most recent call last):
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/run/benchmarks/swebench.py", line 146, in process_instance
+    env = get_sb_environment(config, instance)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/run/benchmarks/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/environments/__init__.py", line 33, in get_environment
+    return get_environment_class(environment_class)(**config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/environments/docker.py", line 59, in __init__
+    self._start_container()
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/environments/docker.py", line 91, in _start_container
+    result = subprocess.run(
+             ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 550, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 1209, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 2116, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+  File "/usr/lib/python3.12/subprocess.py", line 1253, in _check_timeout
+    raise TimeoutExpired(
+subprocess.TimeoutExpired: Command '['docker', 'run', '-d', '--name', 'minisweagent-05ba3d3f', '-w', '/testbed', '--rm', 'docker.io/swebench/sweb.eval.x86_64.django_1776_django-14672:latest', 'sleep', '2h']' timed out after 120 seconds
+2026-10-25 12:45:11,657 - minisweagent - INFO - Loading dataset princeton-nlp/SWE-Bench_Verified, split test...
+2026-10-25 12:45:32,918 - minisweagent - INFO - Instance slice: 500 -> 1 instances
+2026-10-25 12:45:32,921 - minisweagent - INFO - Skipping 1 existing instances
+2026-10-25 12:45:32,922 - minisweagent - INFO - Running on 0 instances...
+2026-10-25 12:45:32,922 - minisweagent - INFO - Building agent config from specs: ['.venv/lib/python3.12/site-packages/minisweagent/config/benchmarks/swebench.yaml', 'model.model_name=openai/flint', 'model.model_kwargs.api_base=http://127.0.0.1:9000/v1', 'model.model_kwargs.api_key=none', 'model.model_kwargs.max_tokens=4096', 'model.cost_tracking=ignore_errors', 'agent.step_limit=40']
+2026-10-25 12:46:57,200 - minisweagent - INFO - Loading dataset princeton-nlp/SWE-Bench_Verified, split test...
+2026-10-25 12:47:14,280 - minisweagent - INFO - Instance slice: 500 -> 1 instances
+2026-10-25 12:47:14,282 - minisweagent - INFO - Running on 1 instances...
+2026-10-25 12:47:14,282 - minisweagent - INFO - Building agent config from specs: ['.venv/lib/python3.12/site-packages/minisweagent/config/benchmarks/swebench.yaml', 'model.model_name=openai/flint', 'model.model_kwargs.api_base=http://127.0.0.1:9000/v1', 'model.model_kwargs.api_key=none', 'model.model_kwargs.max_tokens=4096', 'model.cost_tracking=ignore_errors', 'agent.step_limit=40']
+2026-10-25 12:47:19,298 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-019b2b63 -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.django_1776_django-14672:latest sleep 2h
+2026-10-25 12:47:19,848 - minisweagent.environment - INFO - Started container minisweagent-019b2b63 with ID 9e73d4d975e0fa53fbc0a54ab96b52ee228a7f68843e89320c784fd6fb7a9a6d
+2026-10-25 12:51:45,493 - minisweagent - ERROR - Error processing instance django__django-14672: No module named 'mcp'
+Traceback (most recent call last):
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/run/benchmarks/swebench.py", line 154, in process_instance
+    info = agent.run(task)
+           ^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/agents/default.py", line 98, in run
+    self.step()
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/run/benchmarks/utils/common.py", line 17, in step
+    return super().step()
+           ^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/agents/default.py", line 128, in step
+    return self.execute_actions(self.query())
+                                ^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/agents/default.py", line 149, in query
+    message = self.model.query(self.messages)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/models/litellm_model.py", line 82, in query
+    for attempt in retry(logger=logger, abort_exceptions=self.abort_exceptions):
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 514, in __iter__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 440, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 482, in exc_check
+    retry_exc.reraise()
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 216, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/models/litellm_model.py", line 84, in query
+    response = self._query(self._prepare_messages_for_api(messages), **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/models/litellm_model.py", line 66, in _query
+    return litellm.completion(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/chat_completions/dispatch.py", line 91, in completion
+    return _DISPATCH.run(
+           ^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/rust_bridge/dispatch.py", line 81, in run
+    return python(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/utils.py", line 1983, in wrapper
+    raise e
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/utils.py", line 1834, in wrapper
+    result = original_function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/main.py", line 5297, in completion
+    from litellm.responses.mcp.chat_completions_handler import acompletion_with_mcp
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/responses/mcp/chat_completions_handler.py", line 10, in <module>
+    from litellm.responses.mcp.litellm_proxy_mcp_handler import (
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/responses/mcp/litellm_proxy_mcp_handler.py", line 13, in <module>
+    from litellm.proxy._experimental.mcp_server.catalog import catalog_operation, global_manager
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/proxy/_experimental/mcp_server/catalog.py", line 20, in <module>
+    from mcp.types import CacheableResult
+ModuleNotFoundError: No module named 'mcp'
+2026-10-25 12:51:45,511 - minisweagent - INFO - Saved trajectory to 'runs/laptop-Q2/django__django-14672/django__django-14672.traj.json'
+2026-10-25 12:52:58,218 - minisweagent - INFO - Loading dataset princeton-nlp/SWE-Bench_Verified, split test...
+2026-10-25 12:53:15,403 - minisweagent - INFO - Instance slice: 500 -> 1 instances
+2026-10-25 12:53:15,405 - minisweagent - INFO - Running on 1 instances...
+2026-10-25 12:53:15,406 - minisweagent - INFO - Building agent config from specs: ['.venv/lib/python3.12/site-packages/minisweagent/config/benchmarks/swebench.yaml', 'model.model_name=openai/flint', 'model.model_kwargs.api_base=http://127.0.0.1:9000/v1', 'model.model_kwargs.api_key=none', 'model.model_kwargs.max_tokens=4096', 'model.cost_tracking=ignore_errors', 'agent.step_limit=40']
+2026-10-25 12:53:18,983 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-e19e4cc4 -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.django_1776_django-14672:latest sleep 2h
+2026-10-25 12:53:19,495 - minisweagent.environment - INFO - Started container minisweagent-e19e4cc4 with ID e3254c901d49fc686e420becf273ddd0be154e067ba5816f3fb32271e3dfde53
+2026-10-25 14:02:36,471 - minisweagent - INFO - Saved trajectory to 'runs/laptop-Q2/django__django-14672/django__django-14672.traj.json'

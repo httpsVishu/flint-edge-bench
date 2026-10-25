@@ -1,7 +1,9 @@
 .venv/
 __pycache__/
-traces/
-runs/
+!traces/laptop-Q2/
+!traces/laptop-Q2/**
+!runs/laptop-Q2/
+!runs/laptop-Q2/**
 *.gguf
 .env
 .env.*
