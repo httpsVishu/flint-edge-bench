@@ -109,3 +109,570 @@ ModuleNotFoundError: No module named 'mcp'
 2026-10-25 12:53:18,983 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-e19e4cc4 -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.django_1776_django-14672:latest sleep 2h
 2026-10-25 12:53:19,495 - minisweagent.environment - INFO - Started container minisweagent-e19e4cc4 with ID e3254c901d49fc686e420becf273ddd0be154e067ba5816f3fb32271e3dfde53
 2026-10-25 14:02:36,471 - minisweagent - INFO - Saved trajectory to 'runs/laptop-Q2/django__django-14672/django__django-14672.traj.json'
+2026-10-26 07:08:17,200 - minisweagent - INFO - Loading dataset princeton-nlp/SWE-Bench_Verified, split test...
+2026-10-26 07:08:32,461 - minisweagent - INFO - Instance slice: 500 -> 3 instances
+2026-10-26 07:08:32,467 - minisweagent - INFO - Skipping 1 existing instances
+2026-10-26 07:08:32,468 - minisweagent - INFO - Running on 2 instances...
+2026-10-26 07:08:32,470 - minisweagent - INFO - Building agent config from specs: ['swebench.yaml', 'model.model_name=openai/flint', 'model.model_kwargs.api_base=http://127.0.0.1:9000/v1', 'model.model_kwargs.api_key=none', 'model.model_kwargs.max_tokens=4096', 'model.cost_tracking=ignore_errors', 'agent.step_limit=40']
+2026-10-26 07:08:43,502 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-a8a8334a -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-10449:latest sleep 2h
+2026-10-26 07:08:43,832 - minisweagent - ERROR - Error processing instance sphinx-doc__sphinx-10449: Command '['docker', 'run', '-d', '--name', 'minisweagent-a8a8334a', '-w', '/testbed', '--rm', 'docker.io/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-10449:latest', 'sleep', '2h']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/run/benchmarks/swebench.py", line 146, in process_instance
+    env = get_sb_environment(config, instance)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/run/benchmarks/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/environments/__init__.py", line 33, in get_environment
+    return get_environment_class(environment_class)(**config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/environments/docker.py", line 59, in __init__
+    self._start_container()
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/environments/docker.py", line 91, in _start_container
+    result = subprocess.run(
+             ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['docker', 'run', '-d', '--name', 'minisweagent-a8a8334a', '-w', '/testbed', '--rm', 'docker.io/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-10449:latest', 'sleep', '2h']' returned non-zero exit status 1.
+2026-10-26 07:08:43,856 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-4e3be32e -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.django_1776_django-11299:latest sleep 2h
+2026-10-26 07:08:44,136 - minisweagent - ERROR - Error processing instance django__django-11299: Command '['docker', 'run', '-d', '--name', 'minisweagent-4e3be32e', '-w', '/testbed', '--rm', 'docker.io/swebench/sweb.eval.x86_64.django_1776_django-11299:latest', 'sleep', '2h']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/run/benchmarks/swebench.py", line 146, in process_instance
+    env = get_sb_environment(config, instance)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/run/benchmarks/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/environments/__init__.py", line 33, in get_environment
+    return get_environment_class(environment_class)(**config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/environments/docker.py", line 59, in __init__
+    self._start_container()
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/environments/docker.py", line 91, in _start_container
+    result = subprocess.run(
+             ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['docker', 'run', '-d', '--name', 'minisweagent-4e3be32e', '-w', '/testbed', '--rm', 'docker.io/swebench/sweb.eval.x86_64.django_1776_django-11299:latest', 'sleep', '2h']' returned non-zero exit status 1.
+2026-10-26 07:10:24,139 - minisweagent - INFO - Loading dataset princeton-nlp/SWE-Bench_Verified, split test...
+2026-10-26 07:10:29,483 - minisweagent - INFO - Instance slice: 500 -> 3 instances
+2026-10-26 07:10:29,487 - minisweagent - INFO - Skipping 3 existing instances
+2026-10-26 07:10:29,488 - minisweagent - INFO - Running on 0 instances...
+2026-10-26 07:10:29,488 - minisweagent - INFO - Building agent config from specs: ['swebench.yaml', 'model.model_name=openai/flint', 'model.model_kwargs.api_base=http://127.0.0.1:9000/v1', 'model.model_kwargs.api_key=none', 'model.model_kwargs.max_tokens=4096', 'model.cost_tracking=ignore_errors', 'agent.step_limit=40']
+2026-10-26 07:20:51,109 - minisweagent - INFO - Loading dataset princeton-nlp/SWE-Bench_Verified, split test...
+2026-10-26 07:21:19,844 - minisweagent - INFO - Instance filter: 500 -> 2 instances
+2026-10-26 07:21:19,846 - minisweagent - INFO - Running on 2 instances...
+2026-10-26 07:21:19,847 - minisweagent - INFO - Building agent config from specs: ['swebench.yaml', 'model.model_name=openai/flint', 'model.model_kwargs.api_base=http://127.0.0.1:9000/v1', 'model.model_kwargs.api_key=none', 'model.model_kwargs.max_tokens=4096', 'model.cost_tracking=ignore_errors', 'agent.step_limit=40']
+2026-10-26 07:21:25,025 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-f9d43ca0 -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.django_1776_django-11299:latest sleep 2h
+2026-10-26 07:21:25,556 - minisweagent.environment - INFO - Started container minisweagent-f9d43ca0 with ID d61990e31db16e9f31b103bfe9210b0e552902039f4688701e65b62107aa4d9a
+2026-10-26 08:53:32,683 - minisweagent - INFO - Cancelling all pending jobs. Press ^C again to exit immediately.
+2026-10-31 14:07:36,128 - minisweagent - INFO - Loading dataset princeton-nlp/SWE-Bench_Verified, split test...
+2026-10-31 14:07:42,930 - minisweagent - INFO - Instance filter: 500 -> 2 instances
+2026-10-31 14:07:42,933 - minisweagent - INFO - Running on 2 instances...
+2026-10-31 14:07:42,935 - minisweagent - INFO - Building agent config from specs: ['swebench.yaml', 'model.model_name=openai/flint', 'model.model_kwargs.api_base=http://127.0.0.1:9000/v1', 'model.model_kwargs.api_key=none', 'model.model_kwargs.max_tokens=4096', 'model.cost_tracking=ignore_errors', 'agent.step_limit=40']
+2026-10-31 14:07:52,069 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-e5cf15fc -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.django_1776_django-11299:latest sleep 2h
+2026-10-31 14:07:53,682 - minisweagent.environment - INFO - Started container minisweagent-e5cf15fc with ID ad8d239cbb64dd6103ab0fa35e91f7d32215200e54f4d37218b7a588d3f32aaf
+2026-10-31 14:19:09,455 - minisweagent - ERROR - Error processing instance django__django-11299: litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: OpenAIException - request (4954 tokens) exceeds the available context size (4096 tokens), try increasing it
+Traceback (most recent call last):
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 909, in completion
+    raise e
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 845, in completion
+    ) = self.make_sync_openai_chat_completion_request(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/litellm_core_utils/logging_utils.py", line 391, in sync_wrapper
+    result: Final = func(*args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 556, in make_sync_openai_chat_completion_request
+    raw_response = openai_client.chat.completions.with_raw_response.create(**data, timeout=timeout)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/openai/_legacy_response.py", line 369, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'code': 400, 'message': 'request (4954 tokens) exceeds the available context size (4096 tokens), try increasing it', 'type': 'exceed_context_size_error', 'n_prompt_tokens': 4954, 'n_ctx': 4096}}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/main.py", line 6000, in completion
+    response = _complete_custom_openai(_dispatch_ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/main.py", line 2746, in _complete_custom_openai
+    raise e
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/main.py", line 2718, in _complete_custom_openai
+    response = openai_chat_completions.completion(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 920, in completion
+    raise OpenAIError(
+litellm.llms.openai.common_utils.OpenAIError: Error code: 400 - {'error': {'code': 400, 'message': 'request (4954 tokens) exceeds the available context size (4096 tokens), try increasing it', 'type': 'exceed_context_size_error', 'n_prompt_tokens': 4954, 'n_ctx': 4096}}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/run/benchmarks/swebench.py", line 154, in process_instance
+    info = agent.run(task)
+           ^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/agents/default.py", line 98, in run
+    self.step()
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/run/benchmarks/utils/common.py", line 17, in step
+    return super().step()
+           ^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/agents/default.py", line 128, in step
+    return self.execute_actions(self.query())
+                                ^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/agents/default.py", line 149, in query
+    message = self.model.query(self.messages)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/models/litellm_model.py", line 82, in query
+    for attempt in retry(logger=logger, abort_exceptions=self.abort_exceptions):
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 514, in __iter__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 440, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 462, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/models/litellm_model.py", line 84, in query
+    response = self._query(self._prepare_messages_for_api(messages), **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/models/litellm_model.py", line 66, in _query
+    return litellm.completion(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/chat_completions/dispatch.py", line 91, in completion
+    return _DISPATCH.run(
+           ^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/rust_bridge/dispatch.py", line 81, in run
+    return python(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/utils.py", line 1983, in wrapper
+    raise e
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/utils.py", line 1834, in wrapper
+    result = original_function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/main.py", line 6122, in completion
+    raise exception_type(
+          ^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2745, in exception_type
+    raise e  # it's already mapped
+    ^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2492, in exception_type
+    _map_openai_exception(
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 319, in _map_openai_exception
+    raise ContextWindowExceededError(
+litellm.exceptions.ContextWindowExceededError: litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: OpenAIException - request (4954 tokens) exceeds the available context size (4096 tokens), try increasing it
+2026-10-31 14:19:09,968 - minisweagent - INFO - Saved trajectory to 'runs/laptop-Q2/django__django-11299/django__django-11299.traj.json'
+2026-10-31 14:19:10,057 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-f6bc37b4 -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-10449:latest sleep 2h
+2026-10-31 14:19:11,226 - minisweagent.environment - INFO - Started container minisweagent-f6bc37b4 with ID 1e6fe9227fe044c14a70a34038c4ed377c503ba9cb44d5c035e9fc1ab0afd7d9
+2026-10-31 14:28:36,056 - minisweagent - ERROR - Error processing instance sphinx-doc__sphinx-10449: litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: OpenAIException - request (5261 tokens) exceeds the available context size (4096 tokens), try increasing it
+Traceback (most recent call last):
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 909, in completion
+    raise e
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 845, in completion
+    ) = self.make_sync_openai_chat_completion_request(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/litellm_core_utils/logging_utils.py", line 391, in sync_wrapper
+    result: Final = func(*args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 556, in make_sync_openai_chat_completion_request
+    raw_response = openai_client.chat.completions.with_raw_response.create(**data, timeout=timeout)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/openai/_legacy_response.py", line 369, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'code': 400, 'message': 'request (5261 tokens) exceeds the available context size (4096 tokens), try increasing it', 'type': 'exceed_context_size_error', 'n_prompt_tokens': 5261, 'n_ctx': 4096}}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/main.py", line 6000, in completion
+    response = _complete_custom_openai(_dispatch_ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/main.py", line 2746, in _complete_custom_openai
+    raise e
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/main.py", line 2718, in _complete_custom_openai
+    response = openai_chat_completions.completion(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 920, in completion
+    raise OpenAIError(
+litellm.llms.openai.common_utils.OpenAIError: Error code: 400 - {'error': {'code': 400, 'message': 'request (5261 tokens) exceeds the available context size (4096 tokens), try increasing it', 'type': 'exceed_context_size_error', 'n_prompt_tokens': 5261, 'n_ctx': 4096}}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/run/benchmarks/swebench.py", line 154, in process_instance
+    info = agent.run(task)
+           ^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/agents/default.py", line 98, in run
+    self.step()
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/run/benchmarks/utils/common.py", line 17, in step
+    return super().step()
+           ^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/agents/default.py", line 128, in step
+    return self.execute_actions(self.query())
+                                ^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/agents/default.py", line 149, in query
+    message = self.model.query(self.messages)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/models/litellm_model.py", line 82, in query
+    for attempt in retry(logger=logger, abort_exceptions=self.abort_exceptions):
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 514, in __iter__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 440, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 462, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/models/litellm_model.py", line 84, in query
+    response = self._query(self._prepare_messages_for_api(messages), **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/models/litellm_model.py", line 66, in _query
+    return litellm.completion(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/chat_completions/dispatch.py", line 91, in completion
+    return _DISPATCH.run(
+           ^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/rust_bridge/dispatch.py", line 81, in run
+    return python(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/utils.py", line 1983, in wrapper
+    raise e
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/utils.py", line 1834, in wrapper
+    result = original_function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/main.py", line 6122, in completion
+    raise exception_type(
+          ^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2745, in exception_type
+    raise e  # it's already mapped
+    ^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2492, in exception_type
+    _map_openai_exception(
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 319, in _map_openai_exception
+    raise ContextWindowExceededError(
+litellm.exceptions.ContextWindowExceededError: litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: OpenAIException - request (5261 tokens) exceeds the available context size (4096 tokens), try increasing it
+2026-10-31 14:28:36,142 - minisweagent - INFO - Saved trajectory to 'runs/laptop-Q2/sphinx-doc__sphinx-10449/sphinx-doc__sphinx-10449.traj.json'
+2026-11-01 14:36:01,503 - minisweagent - INFO - Loading dataset princeton-nlp/SWE-Bench_Verified, split test...
+2026-11-01 14:36:10,549 - minisweagent - INFO - Instance slice: 500 -> 3 instances
+2026-11-01 14:36:10,552 - minisweagent - INFO - Skipping 1 existing instances
+2026-11-01 14:36:10,553 - minisweagent - INFO - Running on 2 instances...
+2026-11-01 14:36:10,554 - minisweagent - INFO - Building agent config from specs: ['swebench.yaml', 'model.model_name=openai/flint', 'model.model_kwargs.api_base=http://127.0.0.1:9000/v1', 'model.model_kwargs.api_key=none', 'model.model_kwargs.max_tokens=4096', 'model.cost_tracking=ignore_errors', 'agent.step_limit=40']
+2026-11-01 14:36:17,593 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-7706c821 -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-10449:latest sleep 2h
+2026-11-01 14:36:17,828 - minisweagent - ERROR - Error processing instance sphinx-doc__sphinx-10449: Command '['docker', 'run', '-d', '--name', 'minisweagent-7706c821', '-w', '/testbed', '--rm', 'docker.io/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-10449:latest', 'sleep', '2h']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/run/benchmarks/swebench.py", line 146, in process_instance
+    env = get_sb_environment(config, instance)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/run/benchmarks/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/environments/__init__.py", line 33, in get_environment
+    return get_environment_class(environment_class)(**config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/environments/docker.py", line 59, in __init__
+    self._start_container()
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/environments/docker.py", line 91, in _start_container
+    result = subprocess.run(
+             ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['docker', 'run', '-d', '--name', 'minisweagent-7706c821', '-w', '/testbed', '--rm', 'docker.io/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-10449:latest', 'sleep', '2h']' returned non-zero exit status 1.
+2026-11-01 14:36:17,858 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-84fb2a88 -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.django_1776_django-11299:latest sleep 2h
+2026-11-01 14:36:18,040 - minisweagent - ERROR - Error processing instance django__django-11299: Command '['docker', 'run', '-d', '--name', 'minisweagent-84fb2a88', '-w', '/testbed', '--rm', 'docker.io/swebench/sweb.eval.x86_64.django_1776_django-11299:latest', 'sleep', '2h']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/run/benchmarks/swebench.py", line 146, in process_instance
+    env = get_sb_environment(config, instance)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/run/benchmarks/swebench.py", line 88, in get_sb_environment
+    env = get_environment(env_config)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/environments/__init__.py", line 33, in get_environment
+    return get_environment_class(environment_class)(**config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/environments/docker.py", line 59, in __init__
+    self._start_container()
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/environments/docker.py", line 91, in _start_container
+    result = subprocess.run(
+             ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['docker', 'run', '-d', '--name', 'minisweagent-84fb2a88', '-w', '/testbed', '--rm', 'docker.io/swebench/sweb.eval.x86_64.django_1776_django-11299:latest', 'sleep', '2h']' returned non-zero exit status 1.
+2026-11-01 14:40:47,486 - minisweagent - INFO - Loading dataset princeton-nlp/SWE-Bench_Verified, split test...
+2026-11-01 14:40:54,277 - minisweagent - INFO - Instance slice: 500 -> 3 instances
+2026-11-01 14:40:54,282 - minisweagent - INFO - Skipping 3 existing instances
+2026-11-01 14:40:54,283 - minisweagent - INFO - Running on 0 instances...
+2026-11-01 14:40:54,285 - minisweagent - INFO - Building agent config from specs: ['swebench.yaml', 'model.model_name=openai/flint', 'model.model_kwargs.api_base=http://127.0.0.1:9000/v1', 'model.model_kwargs.api_key=none', 'model.model_kwargs.max_tokens=4096', 'model.cost_tracking=ignore_errors', 'agent.step_limit=40']
+2026-11-01 14:49:43,093 - minisweagent - INFO - Loading dataset princeton-nlp/SWE-Bench_Verified, split test...
+2026-11-01 14:49:57,367 - minisweagent - INFO - Instance slice: 500 -> 3 instances
+2026-11-01 14:49:57,369 - minisweagent - INFO - Skipping 1 existing instances
+2026-11-01 14:49:57,369 - minisweagent - INFO - Running on 2 instances...
+2026-11-01 14:49:57,370 - minisweagent - INFO - Building agent config from specs: ['swebench.yaml', 'model.model_name=openai/flint', 'model.model_kwargs.api_base=http://127.0.0.1:9000/v1', 'model.model_kwargs.api_key=none', 'model.model_kwargs.max_tokens=4096', 'model.cost_tracking=ignore_errors', 'agent.step_limit=40']
+2026-11-01 14:50:18,553 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-0fb0c7f4 -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-10449:latest sleep 2h
+2026-11-01 14:50:19,199 - minisweagent.environment - INFO - Started container minisweagent-0fb0c7f4 with ID b48e2cca3f862866a485e550e9163295c3afd96791a6d0df6e0f18174f73785f
+2026-11-01 15:02:24,900 - minisweagent - ERROR - Error processing instance sphinx-doc__sphinx-10449: litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: OpenAIException - request (6511 tokens) exceeds the available context size (4096 tokens), try increasing it
+Traceback (most recent call last):
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 909, in completion
+    raise e
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 845, in completion
+    ) = self.make_sync_openai_chat_completion_request(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/litellm_core_utils/logging_utils.py", line 391, in sync_wrapper
+    result: Final = func(*args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 556, in make_sync_openai_chat_completion_request
+    raw_response = openai_client.chat.completions.with_raw_response.create(**data, timeout=timeout)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/openai/_legacy_response.py", line 369, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'code': 400, 'message': 'request (6511 tokens) exceeds the available context size (4096 tokens), try increasing it', 'type': 'exceed_context_size_error', 'n_prompt_tokens': 6511, 'n_ctx': 4096}}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/main.py", line 6000, in completion
+    response = _complete_custom_openai(_dispatch_ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/main.py", line 2746, in _complete_custom_openai
+    raise e
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/main.py", line 2718, in _complete_custom_openai
+    response = openai_chat_completions.completion(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 920, in completion
+    raise OpenAIError(
+litellm.llms.openai.common_utils.OpenAIError: Error code: 400 - {'error': {'code': 400, 'message': 'request (6511 tokens) exceeds the available context size (4096 tokens), try increasing it', 'type': 'exceed_context_size_error', 'n_prompt_tokens': 6511, 'n_ctx': 4096}}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/run/benchmarks/swebench.py", line 154, in process_instance
+    info = agent.run(task)
+           ^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/agents/default.py", line 98, in run
+    self.step()
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/run/benchmarks/utils/common.py", line 17, in step
+    return super().step()
+           ^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/agents/default.py", line 128, in step
+    return self.execute_actions(self.query())
+                                ^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/agents/default.py", line 149, in query
+    message = self.model.query(self.messages)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/models/litellm_model.py", line 82, in query
+    for attempt in retry(logger=logger, abort_exceptions=self.abort_exceptions):
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 514, in __iter__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 440, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 462, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/models/litellm_model.py", line 84, in query
+    response = self._query(self._prepare_messages_for_api(messages), **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/models/litellm_model.py", line 66, in _query
+    return litellm.completion(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/chat_completions/dispatch.py", line 91, in completion
+    return _DISPATCH.run(
+           ^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/rust_bridge/dispatch.py", line 81, in run
+    return python(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/utils.py", line 1983, in wrapper
+    raise e
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/utils.py", line 1834, in wrapper
+    result = original_function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/main.py", line 6122, in completion
+    raise exception_type(
+          ^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2745, in exception_type
+    raise e  # it's already mapped
+    ^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2492, in exception_type
+    _map_openai_exception(
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 319, in _map_openai_exception
+    raise ContextWindowExceededError(
+litellm.exceptions.ContextWindowExceededError: litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: OpenAIException - request (6511 tokens) exceeds the available context size (4096 tokens), try increasing it
+2026-11-01 15:02:25,085 - minisweagent - INFO - Saved trajectory to 'runs/laptop-Q2/sphinx-doc__sphinx-10449/sphinx-doc__sphinx-10449.traj.json'
+2026-11-01 15:02:25,277 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-8076a488 -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.django_1776_django-11299:latest sleep 2h
+2026-11-01 15:02:27,261 - minisweagent.environment - INFO - Started container minisweagent-8076a488 with ID 179070388bb0299f147fcdbfb70ce19b108510018b5584072b1d525fc6a8c4b4
+2026-11-01 15:15:36,209 - minisweagent - ERROR - Error processing instance django__django-11299: litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: OpenAIException - request (4251 tokens) exceeds the available context size (4096 tokens), try increasing it
+Traceback (most recent call last):
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 909, in completion
+    raise e
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 845, in completion
+    ) = self.make_sync_openai_chat_completion_request(
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/litellm_core_utils/logging_utils.py", line 391, in sync_wrapper
+    result: Final = func(*args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 556, in make_sync_openai_chat_completion_request
+    raw_response = openai_client.chat.completions.with_raw_response.create(**data, timeout=timeout)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/openai/_legacy_response.py", line 369, in wrapped
+    return cast(LegacyAPIResponse[R], func(*args, **kwargs))
+                                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/openai/resources/chat/completions/completions.py", line 1296, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1375, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/openai/_base_client.py", line 1148, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'code': 400, 'message': 'request (4251 tokens) exceeds the available context size (4096 tokens), try increasing it', 'type': 'exceed_context_size_error', 'n_prompt_tokens': 4251, 'n_ctx': 4096}}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/main.py", line 6000, in completion
+    response = _complete_custom_openai(_dispatch_ctx)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/main.py", line 2746, in _complete_custom_openai
+    raise e
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/main.py", line 2718, in _complete_custom_openai
+    response = openai_chat_completions.completion(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/llms/openai/openai.py", line 920, in completion
+    raise OpenAIError(
+litellm.llms.openai.common_utils.OpenAIError: Error code: 400 - {'error': {'code': 400, 'message': 'request (4251 tokens) exceeds the available context size (4096 tokens), try increasing it', 'type': 'exceed_context_size_error', 'n_prompt_tokens': 4251, 'n_ctx': 4096}}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/run/benchmarks/swebench.py", line 154, in process_instance
+    info = agent.run(task)
+           ^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/agents/default.py", line 98, in run
+    self.step()
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/run/benchmarks/utils/common.py", line 17, in step
+    return super().step()
+           ^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/agents/default.py", line 128, in step
+    return self.execute_actions(self.query())
+                                ^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/agents/default.py", line 149, in query
+    message = self.model.query(self.messages)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/models/litellm_model.py", line 82, in query
+    for attempt in retry(logger=logger, abort_exceptions=self.abort_exceptions):
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 514, in __iter__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 440, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 462, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/models/litellm_model.py", line 84, in query
+    response = self._query(self._prepare_messages_for_api(messages), **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/minisweagent/models/litellm_model.py", line 66, in _query
+    return litellm.completion(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/chat_completions/dispatch.py", line 91, in completion
+    return _DISPATCH.run(
+           ^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/rust_bridge/dispatch.py", line 81, in run
+    return python(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/utils.py", line 1983, in wrapper
+    raise e
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/utils.py", line 1834, in wrapper
+    result = original_function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/main.py", line 6122, in completion
+    raise exception_type(
+          ^^^^^^^^^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2745, in exception_type
+    raise e  # it's already mapped
+    ^^^^^^^
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2492, in exception_type
+    _map_openai_exception(
+  File "/home/vishu/flint-edge-bench/.venv/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 319, in _map_openai_exception
+    raise ContextWindowExceededError(
+litellm.exceptions.ContextWindowExceededError: litellm.ContextWindowExceededError: litellm.BadRequestError: ContextWindowExceededError: OpenAIException - request (4251 tokens) exceeds the available context size (4096 tokens), try increasing it
+2026-11-01 15:15:36,378 - minisweagent - INFO - Saved trajectory to 'runs/laptop-Q2/django__django-11299/django__django-11299.traj.json'
+2026-11-01 15:23:55,553 - minisweagent - INFO - Loading dataset princeton-nlp/SWE-Bench_Verified, split test...
+2026-11-01 15:24:07,237 - minisweagent - INFO - Instance slice: 500 -> 3 instances
+2026-11-01 15:24:07,240 - minisweagent - INFO - Skipping 1 existing instances
+2026-11-01 15:24:07,241 - minisweagent - INFO - Running on 2 instances...
+2026-11-01 15:24:07,242 - minisweagent - INFO - Building agent config from specs: ['swebench.yaml', 'model.model_name=openai/flint', 'model.model_kwargs.api_base=http://127.0.0.1:9000/v1', 'model.model_kwargs.api_key=none', 'model.model_kwargs.max_tokens=4096', 'model.cost_tracking=ignore_errors', 'agent.step_limit=40']
+2026-11-01 15:24:17,576 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-c904467c -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-10449:latest sleep 2h
+2026-11-01 15:24:18,416 - minisweagent.environment - INFO - Started container minisweagent-c904467c with ID 603be5f4f45c01c28d5587a5483d1323c0caba476238dea0029fa5abf2db0b18
+2026-11-01 16:47:41,844 - minisweagent - INFO - Cancelling all pending jobs. Press ^C again to exit immediately.
+2026-11-02 14:19:02,823 - minisweagent - INFO - Loading dataset princeton-nlp/SWE-Bench_Verified, split test...
+2026-11-02 14:19:09,011 - minisweagent - INFO - Instance slice: 500 -> 3 instances
+2026-11-02 14:19:09,015 - minisweagent - INFO - Skipping 1 existing instances
+2026-11-02 14:19:09,016 - minisweagent - INFO - Running on 2 instances...
+2026-11-02 14:19:09,018 - minisweagent - INFO - Building agent config from specs: ['swebench.yaml', 'model.model_name=openai/flint', 'model.model_kwargs.api_base=http://127.0.0.1:9000/v1', 'model.model_kwargs.api_key=none', 'model.model_kwargs.max_tokens=4096', 'model.model_kwargs.timeout=3600', 'model.cost_tracking=ignore_errors', 'agent.step_limit=30']
+2026-11-02 14:19:16,107 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-53ae9c7c -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.sphinx-doc_1776_sphinx-10449:latest sleep 2h
+2026-11-02 14:19:17,312 - minisweagent.environment - INFO - Started container minisweagent-53ae9c7c with ID 80b4fc82de26e7b40fd676ed21db042c897dc207063c94bf859a894def5df883
+2026-11-02 17:47:27,616 - minisweagent - INFO - Saved trajectory to 'runs/laptop-Q2/sphinx-doc__sphinx-10449/sphinx-doc__sphinx-10449.traj.json'
+2026-11-02 17:47:27,725 - minisweagent.environment - DEBUG - Starting container with command: docker run -d --name minisweagent-47a28573 -w /testbed --rm docker.io/swebench/sweb.eval.x86_64.django_1776_django-11299:latest sleep 2h
+2026-11-02 17:47:28,662 - minisweagent.environment - INFO - Started container minisweagent-47a28573 with ID b67c942935c4ce3aa2342b9de39dda15b105d64040959194e868ac6ef6f0857e
+2026-11-02 20:54:38,734 - minisweagent - INFO - Saved trajectory to 'runs/laptop-Q2/django__django-11299/django__django-11299.traj.json'

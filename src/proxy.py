@@ -18,11 +18,14 @@ class State:
 def make_handler(upstream, out_dir):
     class Handler(BaseHTTPRequestHandler):
         def _send(self, code, body, ctype="application/json"):
-            self.send_response(code)
-            self.send_header("Content-Type", ctype)
-            self.send_header("Content-Length", str(len(body)))
-            self.end_headers()
-            self.wfile.write(body)
+            try:
+                self.send_response(code)
+                self.send_header("Content-Type", ctype)
+                self.send_header("Content-Length", str(len(body)))
+                self.end_headers()
+                self.wfile.write(body)
+            except BrokenPipeError:
+                pass  # the agent hung up; nothing to do
 
         def do_GET(self):
             r = requests.get(upstream + self.path, timeout=60)
@@ -74,7 +77,9 @@ def main():
     ap.add_argument("--upstream", default="http://127.0.0.1:8080")
     ap.add_argument("--port", type=int, default=9000)
     ap.add_argument("--out", required=True)
+    ap.add_argument("--start-trace-id", type=int, default=0)
     args = ap.parse_args()
+    State.trace_id = args.start_trace_id
     out_dir = pathlib.Path(args.out)
     out_dir.mkdir(parents=True, exist_ok=True)
     server = ThreadingHTTPServer(("127.0.0.1", args.port), make_handler(args.upstream, out_dir))

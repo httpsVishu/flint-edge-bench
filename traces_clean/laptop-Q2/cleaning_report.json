@@ -1,0 +1,53 @@
+{
+  "kept": [
+    {
+      "task": "django__django-14672",
+      "from_file": "trace_0001.jsonl",
+      "steps_raw": 21,
+      "first_seen": "2026-10-25 12:59",
+      "steps_kept": 21,
+      "written_as": "trace_0001.jsonl"
+    },
+    {
+      "task": "sphinx-doc__sphinx-10449",
+      "from_file": "trace_0002.jsonl",
+      "steps_raw": 30,
+      "first_seen": "2026-11-02 14:24",
+      "steps_kept": 30,
+      "written_as": "trace_0002.jsonl"
+    },
+    {
+      "task": "django__django-11299",
+      "from_file": "trace_0003.jsonl",
+      "steps_raw": 30,
+      "first_seen": "2026-11-02 17:50",
+      "steps_kept": 30,
+      "written_as": "trace_0003.jsonl"
+    }
+  ],
+  "dropped": [
+    {
+      "task": "django__django-11299",
+      "from_file": "trace_0001.jsonl",
+      "steps_raw": 14,
+      "first_seen": "2026-10-26 07:25",
+      "reason": "shorter run of the same task (stopped early); the longest run is kept"
+    },
+    {
+      "task": "sphinx-doc__sphinx-10449",
+      "from_file": "trace_0002.jsonl",
+      "steps_raw": 4,
+      "first_seen": "2026-11-01 14:55",
+      "reason": "shorter run of the same task (stopped early); the longest run is kept"
+    },
+    {
+      "task": "django__django-11299",
+      "from_file": "trace_0003.jsonl",
+      "steps_raw": 4,
+      "first_seen": "2026-11-01 15:07",
+      "reason": "shorter run of the same task (stopped early); the longest run is kept"
+    }
+  ],
+  "duplicates_removed": 0,
+  "rows_without_timings_removed": 0
+}
