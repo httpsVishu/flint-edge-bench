@@ -1,0 +1,2 @@
+tag,run,target_tokens,prompt_n,prompt_ms,prompt_per_second,predicted_n,predicted_ms,predicted_per_second,wall_s
+laptop-Q2-clean,1,2000,2029,140575.527,14.43352227304828,64,69285.827,0.9092768713001,210.2

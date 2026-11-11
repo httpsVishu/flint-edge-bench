@@ -1,0 +1,5 @@
+tag,mode,trace,step,prompt_n,cache_n,prefill_s,decode_tps,completion_tokens,est_decode_s,est_step_s
+laptop-Q2-clean,cold,1,1,2835,0,210.03,0.91,73,80.05,290.08
+laptop-Q2-clean,cold,1,21,10541,0,829.81,0.63,163,260.18,1089.99
+laptop-Q2-clean,cold,2,20,23636,0,1868.25,0.44,33,74.98,1943.24
+laptop-Q2-clean,cold,3,10,10529,0,552.93,0.77,29,37.53,590.46

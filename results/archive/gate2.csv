@@ -1,0 +1,2 @@
+tag,run,target_tokens,prompt_n,prompt_ms,prompt_per_second,predicted_n,predicted_ms,predicted_per_second,wall_s
+gate2,1,1000,1022,70275.031,14.542860891800958,64,64316.005,0.9795384523650063,133.7

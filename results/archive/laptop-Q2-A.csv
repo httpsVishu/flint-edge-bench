@@ -1,0 +1,2 @@
+tag,run,target_tokens,prompt_n,prompt_ms,prompt_per_second,predicted_n,predicted_ms,predicted_per_second,wall_s
+laptop-Q2-A,1,2000,2029,215815.446,9.401551360693619,64,82402.973,0.7645355222802459,299.1

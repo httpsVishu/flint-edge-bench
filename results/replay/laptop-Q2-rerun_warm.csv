@@ -1,0 +1,5 @@
+tag,mode,trace,step,prompt_n,cache_n,prefill_s,decode_tps,completion_tokens,est_decode_s,est_step_s
+laptop-Q2-rerun,warm,2,1,2125,0,215.2,0.8,91,113.32,328.52
+laptop-Q2-rerun,warm,2,2,1088,2132,155.88,0.48,34,70.21,226.09
+laptop-Q2-rerun,warm,2,3,899,3235,120.39,0.47,55,116.82,237.21
+laptop-Q2-rerun,warm,2,4,1581,4136,234.37,0.65,34,52.16,286.53
