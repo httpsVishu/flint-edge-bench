@@ -2,14 +2,6 @@
 
 How long does an AI coding agent spend reading versus writing when it runs on ordinary hardware? This repo measures that for Flint-40B-A2B, the open-weight coding model from Recursive Superintelligence. It is an independent project and is not affiliated with Recursive.
 
-## The short version
-
-- When the prompt cache is cold, **85% to 91%** of one agent step is spent reading the prompt. This held on a 6 GB gaming laptop and on two Kaggle T4 GPUs.
-- Keeping the cache between steps cuts the new reading per step from about 11,900 tokens to about 1,400 tokens. On the laptop a step drops from 16 to 22 minutes to about 3 to 4.5 minutes.
-- On the same recorded prompts, the laptop took about **75 to 140 times longer** per step than the 2x T4 setup. The two setups also used different quantizations (Q2 on the laptop, Q4 on Kaggle), so this is not a pure hardware gap.
-- Laptop reading speed was not stable. The same 2,000-token prompt was read at 23.5 tokens per second on one day and about 10 tokens per second on another. I did not find the cause.
-- In a 3-task pilot on SWE-bench Verified, 1 task produced a patch and 2 hit the 30-step limit. The patch was not scored.
-
 ## Why I did this
 
 Coding agents work in a loop. Each step, the agent sends the whole conversation so far to the model, the model reads it, and then writes a short reply such as a command or an edit. The conversation only grows, so the reading part gets bigger every step.
@@ -25,7 +17,7 @@ The questions were:
 
 | | Laptop | Kaggle |
 |---|---|---|
-| Machine | Acer Aspire A715-79G, Intel i5, 16 GB RAM, RTX 3050 Laptop GPU with 6 GB VRAM | Free Kaggle notebook with 2x NVIDIA T4 (32 GB VRAM in total) |
+| Machine | Acer Aspire A715-79G, Intel Core i5-13420H (8 cores, 12 threads), 16 GB RAM (15.7 GB usable, one module at 3200 MT/s), NVIDIA GeForce RTX 3050 6GB Laptop GPU (6,144 MiB, driver 576.93) | Free Kaggle notebook with 2x NVIDIA T4 (32 GB VRAM in total) |
 | Model files | Unsloth GGUF builds: UD-Q2_K_XL (13.6 GB) and UD-IQ3_XXS (14.5 GB) | A Q4 build of the same model |
 | Runtime | WSL2 on Windows, llama.cpp build 11838 (commit 4231b23dc) | llama.cpp |
 | Main server flags | `-c 32768 -ngl 99 --n-cpu-moe 99` plus the sampling settings below | Fill in before publishing |
